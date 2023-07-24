@@ -1,0 +1,86 @@
+html {
+  
+    text-align: center;
+    font-size: 10px;
+  }
+
+  body {
+    margin: 0;
+    font-size: 2rem;
+    display: flex;
+    flex: 1;
+    min-height: 100vh;
+    align-items: center;
+  }
+   
+  .clock {
+      background: #2d5171;
+    width: 20rem;
+    height: 20rem;
+    position: relative;
+    padding: 2rem;
+    border: 7px solid #16344f;
+    box-shadow: -4px -4px 10px rgba(67,67,67,0.5),
+                  inset 4px 4px 10px rgba(0,0,0,0.5),
+                  inset -4px -4px 10px rgba(67,67,67,0.5),
+                  4px 4px 10px rgba(0,0,0,0.3);
+    border-radius: 50%;
+    margin: 50px auto;
+   
+  }
+
+  .hand {
+    width: 50%;
+    right: 50%;
+    height: 6px;
+    background: #e8d752;
+    position: absolute;
+    top: 50%;
+    border-radius: 6px;
+    transform-origin: 100%;
+    transform: rotate(90deg);
+    transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
+  }
+   
+  .hand.hour-hand {
+    width: 30%;
+    z-index: 3;
+    animation: hour 432s linear infinite;
+    animation-name: hour;
+  }
+   
+  .hand.min-hand {
+    height: 3px;
+    z-index: 10;
+    width: 40%;
+    animation: min 36s linear infinite;
+    animation-name: min;
+  }
+   
+  .hand.second-hand {
+    background: #ee791a;
+    width: 45%;
+    height: 2px;
+    animation: sec 60s linear infinite;
+    animation-name: sec;
+  }
+ .allclock{
+    position: absolute;
+    top: 50%;
+    
+ }  
+ @keyframes sec {
+    0% { transform: rotate(90deg); }
+    100% { transform: rotate(450deg); }
+ }
+ 
+ @keyframes min {
+    0% { transform: rotate(90deg); }
+    100% { transform: rotate(450deg); }
+ }
+ 
+ @keyframes hour {
+    0% { transform: rotate(90deg); }
+    100% { transform: rotate(450deg); }
+ }
+ 
